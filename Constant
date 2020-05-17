@@ -1,0 +1,6 @@
+values = [1, 2, 3, 4, 5]
+
+def func_list(values):
+    print(values[0])
+
+func_list(values)
