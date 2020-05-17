@@ -7,3 +7,12 @@ def func_list(values):
 
 
 func_list(values)
+
+def func_list_two(values):
+    for i in values:
+        print(i)
+    for i in values:
+        print(i)
+
+
+func_list_two(values)

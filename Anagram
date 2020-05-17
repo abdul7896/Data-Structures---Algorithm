@@ -1,0 +1,34 @@
+def anagram(s1, s2):
+    # clean up the strings, lower case all the letters, removing white spaces
+    s1 = s1.replace(" ", "").lower()
+    s2 = s2.replace(" ", "").lower()
+
+    # Edge case Check
+    if len(s1) != len(s2):
+        return False
+
+    # create a dictionary
+    count = {}
+
+    # add the letter in our dict and increment its value, otherwise add once
+    for letter in s1:
+        if letter in count:
+            count[letter] += 1
+        else:
+            count[letter] = 1
+
+    # remove the letter in our dic and decrement its value,otherwise add it in dict
+    for letter in s2:
+        if letter in count:
+            count[letter] -= 1
+        else:
+            count[letter] = 1
+
+    # check if dict is empty otherwise return false as it contains a key and value
+    for k in count:
+        if count[k] != 0:
+            return False
+    return True
+
+
+print(anagram('clint eastwood', 'old west action'))
