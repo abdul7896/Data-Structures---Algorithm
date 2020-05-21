@@ -1,0 +1,14 @@
+def is_isogram(string):
+
+    updated = string.lower()
+    updated.replace(" ", "")
+    counter = []
+    for i in updated:
+        if i in counter:
+            return False
+        else:
+            counter.append(i)
+    return True
+
+
+print(is_isogram("moOse"))
